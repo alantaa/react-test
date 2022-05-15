@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./App.css";
+import { SpinnerDiamond } from "spinners-react";
 
 export default function Axios(props) {
   const [city, setCity] = useState(null);
@@ -54,6 +55,7 @@ export default function Axios(props) {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
+        <SpinnerDiamond />
       </div>
     );
   } else {
