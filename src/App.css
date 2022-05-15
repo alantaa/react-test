@@ -7,6 +7,12 @@ ul {
   text-decoration: none;
   padding: 0;
 }
+a {
+  color: pink;
+}
+p {
+  font-size: 15px;
+}
 
 .App-header {
   background-color: #282c34;

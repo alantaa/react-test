@@ -45,7 +45,10 @@ export default function Axios(props) {
       <div className="Search">
         {form}
         <ul>
-          <li> {weather.name}</li>
+          <li>
+            {" "}
+            <strong> {weather.name} </strong>
+          </li>
           <br />
           <li>{Math.round(weather.temp)}°C</li>
           <li>{weather.description}</li>
@@ -55,6 +58,7 @@ export default function Axios(props) {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
+
         <SpinnerDiamond />
       </div>
     );
