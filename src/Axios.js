@@ -45,8 +45,9 @@ export default function Axios(props) {
         {form}
         <ul>
           <li> {weather.name}</li>
-          <li>Temperature: {Math.round(weather.temp)}°C</li>
-          <li>Description: {weather.description}</li>
+          <br />
+          <li>{Math.round(weather.temp)}°C</li>
+          <li>{weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {weather.wind}m/h</li>
           <li>
