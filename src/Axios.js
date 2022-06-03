@@ -5,11 +5,9 @@ import { SpinnerDiamond } from "spinners-react";
 
 export default function Axios(props) {
   const [city, setCity] = useState(null);
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState(null);
 
   function showWeather(response) {
-    setLoaded(true);
     setWeather({
       temp: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -29,7 +27,7 @@ export default function Axios(props) {
     setCity(event.target.value);
   }
 
-  let form = (
+  const form = (
     <form onSubmit={handleSubmit}>
       <input
         type="search"
@@ -40,7 +38,7 @@ export default function Axios(props) {
     </form>
   );
 
-  if (loaded) {
+  if (weather) {
     return (
       <div className="Search">
         {form}
